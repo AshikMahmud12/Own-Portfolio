@@ -1,13 +1,23 @@
-import React from "react";
-
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import "./App.css";
 
-function App() {
-    return (
-        <div className="App">
-            <h1> Hello Ashik</h1>
-        </div>
-    );
+
+import Navigation from "./Navigation";
+import Header from "./Header";
+import Services from "./Services";
+import * as serviceWorker from './serviceWorker';
+
+ class App extends Component {
+    render() {
+        return (
+            <div>
+                <Navigation />
+                <Header title="Stylish Portfolio" button="Find out More" />
+                <Services />
+            </div>
+        );
+    }
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
